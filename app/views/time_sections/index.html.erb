@@ -1,0 +1,29 @@
+<h1>Listing time_sections</h1>
+
+<table>
+  <tr>
+    <th>Time start</th>
+    <th>Time end</th>
+    <th>Time total</th>
+    <th>Integer</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @time_sections.each do |time_section| %>
+  <tr>
+    <td><%= time_section.time_start %></td>
+    <td><%= time_section.time_end %></td>
+    <td><%= time_section.time_total %></td>
+    <td><%= time_section.integer %></td>
+    <td><%= link_to 'Show', time_section %></td>
+    <td><%= link_to 'Edit', edit_time_section_path(time_section) %></td>
+    <td><%= link_to 'Destroy', time_section, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Time section', new_time_section_path %>

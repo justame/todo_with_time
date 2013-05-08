@@ -1,0 +1,23 @@
+# == Schema Information
+#
+# Table name: todo_items
+#
+#  id            :integer          not null, primary key
+#  title         :string(255)
+#  time_estimate :integer
+#  time_total    :integer
+#  created_at    :datetime         not null
+#  updated_at    :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  estimate_time: 2013-05-05 13:45:14
+  time: 1
+
+two:
+  title: MyString
+  estimate_time: 2013-05-05 13:45:14
+  time: 1

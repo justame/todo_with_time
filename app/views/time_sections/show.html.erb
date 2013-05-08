@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Time start:</b>
+  <%= @time_section.time_start %>
+</p>
+
+<p>
+  <b>Time end:</b>
+  <%= @time_section.time_end %>
+</p>
+
+<p>
+  <b>Time total:</b>
+  <%= @time_section.time_total %>
+</p>
+
+<p>
+  <b>Integer:</b>
+  <%= @time_section.integer %>
+</p>
+
+
+<%= link_to 'Edit', edit_time_section_path(@time_section) %> |
+<%= link_to 'Back', time_sections_path %>

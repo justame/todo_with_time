@@ -1,0 +1,26 @@
+# == Schema Information
+#
+# Table name: time_sections
+#
+#  id           :integer          not null, primary key
+#  time_start   :datetime
+#  time_end     :datetime
+#  time_total   :integer
+#  created_at   :datetime         not null
+#  updated_at   :datetime         not null
+#  todo_item_id :integer
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  time_start: 2013-05-05 13:49:16
+  time_end: 2013-05-05 13:49:16
+  time_total: MyString
+  integer: MyString
+
+two:
+  time_start: 2013-05-05 13:49:16
+  time_end: 2013-05-05 13:49:16
+  time_total: MyString
+  integer: MyString
