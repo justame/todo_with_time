@@ -1,0 +1,16 @@
+%p#notice= notice
+%p= @todo_item.id
+%p
+  %b= @todo_item.id
+%p
+  %b Title:
+  = @todo_item.title
+%p
+  %b Estimated Time:
+  = @todo_item.time_estimate
+%p
+  %b Total Time:
+  = @todo_item.time_total
+= link_to 'Edit', edit_todo_item_path(@todo_item) 
+|
+= link_to 'Back', todo_items_path 

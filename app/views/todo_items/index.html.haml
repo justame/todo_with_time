@@ -1,0 +1,12 @@
+.container
+  %h1 Todo List
+  %div{"ng-controller" => "TodoItemCtrl"}
+    %input{:type => "text", :value => "", "placeholder" => "New Task","ng-model" => "todoNewItemText"}
+    %input.btn.btn-primary{type: "button", value: "Add", ng_click: "addTodoItem()"}
+   
+    %ul.unstyled
+      = render "todo_item", paramMoshe: @todo_items.first
+    %h2 Second List
+    %ul.unstyled
+      = render "todo_item", paramMoshe: "yaron = yaron"
+      

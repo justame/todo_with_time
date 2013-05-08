@@ -1,0 +1,47 @@
+%h1 Listing posts
+-#
+  %table
+    %tr
+      %th Title
+      %th Body
+      %th
+      %th
+      %th
+
+    - @posts.each do |post|
+      %tr
+        %td= post.title
+        %td= post.body
+        %td= link_to 'Show', post
+        %td= link_to 'Edit', edit_post_path(post)
+        %td= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }
+
+  %br
+
+  = link_to 'New Post', new_post_path
+
+
+%div{"ng-controller" => "PostCtrl"}
+  %div
+    ID - Title - Body
+  %ul.ng-cloak{"ng-repeat" => "post in posts"}
+    %li{"style" => "margin-bottom:10px;"}
+      {{post.id}} - {{post.title}} - {{post.body}}
+
+  %div{"style" => "margin-top:20px;"}
+    %input{"type" => "text", "ng-model" => "postNewTitleAdd", "placeholder" => "Title"}
+    %input{"type" => "text", "ng-model" => "postNewBodyAdd", "placeholder" => "Body"}
+    %input{"type" => "button", "ng-click" => "addPost()","value" => "Add new Post"}  
+  %div
+    %input{"type" => "text", "ng-model" => "postIDGet", "placeholder" => "Post ID"}
+    %input{"type" => "button", "ng-click" => "getPost()","value" => "Get Post"}      
+  %div
+    %input{"type" => "text", "ng-model" => "postNewUpdateID", "placeholder" => "ID"}
+    %input{"type" => "text", "ng-model" => "postNewTitleUpdate", "placeholder" => "Title"}
+    %input{"type" => "text", "ng-model" => "postNewBodyUpdate", "placeholder" => "Body"}
+    %input{"type" => "button", "ng-click" => "updatePost()","value" => "Update Post"}      
+  %div
+    %input{"type" => "text", "ng-model" => "postIDDelete", "placeholder" => "Post ID"}
+    %input{"type" => "button", "ng-click" => "deletePost()","value" => "Delete Post"}      
+
+

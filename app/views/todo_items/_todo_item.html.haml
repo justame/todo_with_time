@@ -1,0 +1,10 @@
+%li{"ng-repeat" => "todoItem in todoItems"}
+  {{todoItem.id}}
+  = paramMoshe
+  \-
+  {{todoItem.title}} 
+  Estimated Time:
+  %span{"ng-click" => "setTodoItemTimeEstimate()"}
+    {{todoItem.time_estimate | secondsToTimeFormat}}
+  %input.btn.btn-danger{"type" => "button","value" => "Delete", "ng-click" => "deleteTodoItem()"}
+  %span time: {{todoItem.time_total | secondsToTimeFormat}}
