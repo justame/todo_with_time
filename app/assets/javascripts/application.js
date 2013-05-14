@@ -19,7 +19,7 @@
 //= require moment
 //= require app
 //= require posts
-
+//= require reports
 //= require todo_items
 
 

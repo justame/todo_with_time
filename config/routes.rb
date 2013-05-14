@@ -1,4 +1,6 @@
 TodoWithTime::Application.routes.draw do
+  devise_for :users
+
   resources :posts
 
 
@@ -8,6 +10,8 @@ TodoWithTime::Application.routes.draw do
 
 
   resources :todo_items
+
+  resources :reports
 
 
   # The priority is based upon order of creation:

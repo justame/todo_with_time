@@ -8,6 +8,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<div style="position:absolute;right:10px;top:10x;">
+		<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+	</div>
+	<p class="notice"><%= notice %></p>
+	<p class="alert"><%= alert %></p>
 <%= yield %>
 </body>
 </html>

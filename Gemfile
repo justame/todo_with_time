@@ -11,10 +11,12 @@ gem 'haml-rails'
 gem "angularjs-rails"
 gem 'angular-ui-bootstrap-rails'
 gem 'gon'
+gem 'devise'
 
 group :development do
   gem 'pry'
   gem 'pry-rails'
+  gem 'pry-debugger'
   gem 'annotate', ">=2.5.0"
 end
 # Gems used only for assets and not required

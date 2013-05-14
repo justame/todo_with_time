@@ -47,15 +47,15 @@ angular.module("todo_item",['ngResource']).factory("TodoItemResource", ['$resour
         
         return TodoItem;
     }
-]).controller('TodoItemCtrl',function($scope, $resource, TodoItemResource){
-    $scope.todoItems = gon.todo_items//TodoItemResource.query();
+]);
+myApp.controller('TodoItemCtrl',function($scope, $resource, TodoItemResource){
+    $scope.todoItems = TodoItemResource.query(); // gon.todo_items
     
     // Add
     $scope.addTodoItem = function(){
         if ($scope.todoNewItemText.trim().length == 0) {
             return;
         };
-        
         var todoItem = new TodoItemResource();
         todoItem.title = $scope.todoNewItemText;
         todoItem.time_estimate = 0;
@@ -86,7 +86,6 @@ angular.module("todo_item",['ngResource']).factory("TodoItemResource", ['$resour
     };
 
 });
-
 
 // function parent(){ 
 //     var name = 'yaron';
